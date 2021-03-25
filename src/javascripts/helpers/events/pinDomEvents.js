@@ -1,10 +1,10 @@
 /* eslint-disable no-alert */
 /* eslint-disable object-curly-newline */
-import { showPins } from '../components/pins';
-import addPinForm from '../forms/addPinForm';
-import editPinForm from '../forms/editPinForm';
-import formModal from '../forms/formModal';
-import { createPin, deletePin, getSinglePin, updatePin } from '../helpers/data/pinData';
+import { showPins } from '../../components/pins';
+import addPinForm from '../../forms/addPinForm';
+import editPinForm from '../../forms/editPinForm';
+import formModal from '../../forms/formModal';
+import { createPin, deletePin, getSinglePin, updatePin } from '../data/pinData';
 
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -27,7 +27,7 @@ const domEvents = () => {
       const pinObject = {
         pin_title: document.querySelector('#title').value,
         pin_image: document.querySelector('#image').value,
-        board_id: document.querySelector('#board').value,
+        board_id: document.querySelector('#select-board').value,
       };
 
       createPin(pinObject).then((pinsArray) => showPins(pinsArray));
@@ -41,13 +41,13 @@ const domEvents = () => {
     }
 
     // EDIT PIN
-    if (e.target.id.includes('update-pin')) {
+    if (e.target.id.includes('update-pin-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
       const pinObject = {
         pin_title: document.querySelector('#title').value,
         pin_image: document.querySelector('#image').value,
-        board_id: document.querySelector('#board').value,
+        board_id: document.querySelector('#select-board').value,
       };
 
       updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));

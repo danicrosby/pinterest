@@ -2,7 +2,7 @@ import selectBoard from './selectBoard';
 
 const addPinForm = () => {
   document.querySelector('#overview').innerHTML = '';
-  document.querySelector('#add-icons').innerHTML = '';
+  document.querySelector('#add-button').innerHTML = '';
 
   document.querySelector('#form-container').innerHTML = `
     <div class="container" id="create-board-container">

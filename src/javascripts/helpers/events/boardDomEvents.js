@@ -1,19 +1,19 @@
-import boardPinInfo from '../components/boardPinInfo';
-import { showBoards } from '../components/boards';
-import { showPins } from '../components/pins';
-import addBoardForm from '../forms/addBoardForm';
-import { createBoard, deleteBoard } from '../helpers/data/boardData';
-
-// CLICK EVENTS
+/* eslint-disable no-alert */
+import boardPinInfo from '../../components/boardPinInfo';
+import { showBoards } from '../../components/boards';
+import { showPins } from '../../components/pins';
+import addBoardForm from '../../forms/addBoardForm';
+import { createBoard, deleteBoard } from '../data/boardData';
 
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    // EVENT TO SHOW FORM TO ADD BOARD
+    // ADD BOARD FORM
     if (e.target.id.includes('add-board-btn')) {
       addBoardForm();
+      document.querySelector('#form-container').innerHTML = '';
     }
 
-    // SUMBIT FORM FOR ADDING BOARD
+    // SUBMIT BOARD FORM
     if (e.target.id.includes('submit-board')) {
       e.preventDefault();
       const boardObject = {
@@ -21,19 +21,19 @@ const domEvents = () => {
         board_image: document.querySelector('#image').value,
       };
       createBoard(boardObject).then((boardArray) => showBoards(boardArray));
+      document.querySelector('#form-container').innerHTML = '';
     }
 
     // DELETE BOARD
     if (e.target.id.includes('delete-board')) {
-      // eslint-disable-next-line no-alert
-      if (window.confirm('delete board request line 72')) {
+      if (window.confirm('Are you sure you want to delete this board?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteBoard(firebaseKey).then((boardsArray) => showBoards(boardsArray));
       }
     }
 
     // SEE PINS ON BOARDS
-    if (e.target.id.includes('board-name-title')) {
+    if (e.target.id.includes('see-pins-for-this-board')) {
       const boardId = e.target.id.split('--')[1];
       boardPinInfo(boardId).then((boardInfoObject) => {
         showPins(boardInfoObject.pins);

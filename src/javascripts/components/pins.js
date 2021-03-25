@@ -14,10 +14,11 @@ const showPins = (array) => {
         <img class="card-img-top" src=${item.pin_image} alt=${item.pin_title} style="width: 14em; border-radius: 1em">
         <div class="container pin-card-icons">
           <button class="btn btn-sm btn-secondary card-buttons" data-toggle="modal" data-target="#formModal" id="edit-pin-btn--${item.firebaseKey}"><img src="https://cdn2.iconfinder.com/data/icons/cosmo-multimedia/40/478017-pencil-512.png" style="width: 1em;"></button>
-          <button class="btn btn-sm btn-danger card-buttons" id="delete-pin--${item.firebaseKey}">X</button>
+          <button class="btn btn-sm btn-danger card-buttons" id="delete-pin--${item.firebaseKey}"> X </button>
         </div>
         <div class="card-body">
             <div class="card-title" style="font-size: 14px; margin-top: -10px; margin-left: -1em">${item.pin_title}</div>
+            
           </div>
         </div>
       </div>`;
