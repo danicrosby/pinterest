@@ -10,6 +10,7 @@ const boardDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     // VIEW PINS ON BOARD
     if (e.target.id.includes('view-board-pins')) {
+      e.preventDefault();
       const boardId = e.target.id.split('--')[1];
       getPinsOnBoard(boardId).then((pins) => showPins(pins));
       getSingleBoard(boardId).then((boards) => boardPinInfo(boards));
