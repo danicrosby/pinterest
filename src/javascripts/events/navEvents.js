@@ -1,35 +1,19 @@
-import { showPins, emptyPins } from '../components/pins';
-import { showBoards, emptyBoards } from '../components/boards';
-import signOut from '../helpers/auth/signOut';
+import showPins from '../components/pins';
+import showBoards from '../components/boards';
 import { getPins } from '../helpers/data/pinData';
 import { getBoards } from '../helpers/data/boardData';
 
-const navEvents = (uid) => {
-  // LOGOUT BUTTON
-  document.querySelector('#logout-button').addEventListener('click', signOut);
-
+const navEvents = () => {
   // GET ALL PINS
-  document.querySelector('#all-pins').addEventListener('click', () => {
-    getPins(uid).then((pinsArray) => {
-      if (pinsArray.length) {
-        showPins(pinsArray);
-      } else {
-        emptyPins();
-      }
-    });
+  document.querySelector('#all-pins-dropdown').addEventListener('click', () => {
+    getPins().then((pinsArray) => showPins(pinsArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 
   // GET BOARDS
-  document.querySelector('#boards').addEventListener('click', () => {
-    getBoards(uid).then((boardArray) => {
-      if (boardArray.length) {
-        showBoards(boardArray);
-      } else {
-        emptyBoards();
-      }
-    });
+  document.querySelector('#all-boards-dropdown').addEventListener('click', () => {
+    getBoards().then((boardArray) => showBoards(boardArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
-
-  // END NAV SECTION
 };
 export default navEvents;

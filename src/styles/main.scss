@@ -2,8 +2,77 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
-  color: brown;
-  text-align: center;
-  margin-top: 100px;
+  background-color: white;
+}
+
+#login-form-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 2em;
+}
+
+#google-auth {
+  margin-right: 1em;
+}
+
+.nav-item {
+  margin-left: 1.8em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-button {
+  margin-bottom: 2.5em;
+  margin-left: 2em;
+}
+
+#display-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 3em;
+}
+
+.card-buttons {
+  font-size: 10px;
+  margin-left: -1em;
+  margin-right: 10px;
+}
+
+#follow-count {
+  margin-top: -.5em;
+  font-size: 14px;
+}
+
+#create-board-card {
+  border-radius: 2em;
+  width: 40em;
+  height: 29
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.pin-card-icons {
+  margin-top: -2em;
+  margin-left: 1em;
+  margin-bottom: .5em
+}
+
+.board-card-icons {
+  margin-top: -3.5em;
+  margin-bottom: 2em
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
 }

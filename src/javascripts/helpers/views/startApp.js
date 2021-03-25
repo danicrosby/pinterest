@@ -1,18 +1,20 @@
-import { showBoards } from '../components/boards';
-import logoutButton from '../components/buttons/logoutButton';
+import showBoards from '../../components/boards';
 import domBuilder from './domBuilder';
-import navBar from '../components/navBar';
-import domEvents from '../events/domEvents';
-import navEvents from '../events/navEvents';
-import { getBoards } from '../helpers/data/boardData';
+import logoutButton from '../../components/buttons/logoutButton';
+import navBar from '../../components/navBar';
+import pinDomEvents from '../../events/pinDomEvents';
+import boardDomEvents from '../../events/boardDomEvents';
+import navEvents from '../../events/navEvents';
+import { getBoards } from '../data/boardData';
 
 const startApp = (userObject) => {
   domBuilder();
-  domEvents(userObject.uid);
+  pinDomEvents(userObject);
+  boardDomEvents(userObject);
   navBar();
   logoutButton();
-  navEvents(userObject.uid);
-  getBoards(userObject.uid).then((boards) => showBoards(boards));
+  navEvents(userObject);
+  getBoards(userObject).then((boards) => showBoards(boards));
 };
 
 export default startApp;
