@@ -1,6 +1,8 @@
+import selectBoard from './selectBoard';
+
 const addBoardForm = () => {
-  document.querySelector('#display-content').innerHTML = '';
-  document.querySelector('#add-button').innerHTML = '';
+  document.querySelector('#overview').innerHTML = '';
+  document.querySelector('#add-icons').innerHTML = '';
 
   document.querySelector('#form-container').innerHTML = `
   <div class="container" id="create-board-container">
@@ -11,13 +13,13 @@ const addBoardForm = () => {
         <form id="submit-board-form" class="mb-4">
     
           <div class="form-group">
-            <label for="title">Name</label>
-            <input type="text" class="form-control" id="title" aria-describedby="boardTitle" required>
+            <label for="title"></label>
+            <input type="text" class="form-control" id="title" placeholder="Board Title" aria-describedby="boardTitle" required>
           </div>
     
           <div class="form-group">
-            <label for="image">Image Url</label>
-            <input type="url" class="form-control" id="image" required>
+            <label for="image"></label>
+            <input type="url" class="form-control" placeholder="Image URL" id="image" required>
           </div>
     
           <button type="submit" id="submit-board" class="btn btn-dark float-right" style="margin-top: 1em;">Create</button>
@@ -26,6 +28,8 @@ const addBoardForm = () => {
     </div>
   </div>
 </div>`;
+
+  selectBoard();
 };
 
 export default addBoardForm;

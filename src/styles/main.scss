@@ -24,18 +24,18 @@ main {
   flex-direction: column;
 }
 
-#add-button {
-  margin-bottom: 2.5em;
-  margin-left: 2em;
-}
-
-#display-content {
+#overview {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-left: 3em;
+  margin-left: 2em;
 }
 
+hr {
+  margin-top: -5px;
+  margin-bottom: 1em;
+  margin-left: -1em;
+}
 .card-buttons {
   font-size: 10px;
   margin-left: -1em;

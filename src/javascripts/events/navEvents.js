@@ -1,5 +1,5 @@
-import showPins from '../components/pins';
-import showBoards from '../components/boards';
+import { showPins } from '../components/pins';
+import { showBoards } from '../components/boards';
 import { getPins } from '../helpers/data/pinData';
 import { getBoards } from '../helpers/data/boardData';
 
