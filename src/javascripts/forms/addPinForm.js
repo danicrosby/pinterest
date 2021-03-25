@@ -12,12 +12,12 @@ const addPinForm = () => {
           <div class="card border-white">
           <form id="submit-pin-form" class="mb-4">
             <div class="form-group">
-            <label for="title"></label>
-              <input type="text" class="form-control" id="title" placeholder="Pin Title" aria-describedby="pinTitle" required>
+            <label for="title">Pin Title</label>
+              <input type="text" class="form-control" id="title" aria-describedby="pinTitle" required>
             </div>
             <div class="form-group">
-              <label for="image"></label>
-              <input type="url" class="form-control" placeholder="Image URL" id="image" required>
+              <label for="image">Image Url</label>
+              <input type="url" class="form-control" id="image" required>
             </div>
             <div class="form-group" id="select-board"></div>
             

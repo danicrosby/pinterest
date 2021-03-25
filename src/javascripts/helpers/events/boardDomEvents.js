@@ -1,9 +1,10 @@
 /* eslint-disable no-alert */
-import boardPinInfo from '../../components/boardPinInfo';
 import { showBoards } from '../../components/boards';
 import { showPins } from '../../components/pins';
 import addBoardForm from '../../forms/addBoardForm';
-import { createBoard, deleteBoard } from '../data/boardData';
+import boardPinInfo from '../../components/boardPinInfo';
+import { createBoard, deleteBoard, getSingleBoard } from '../data/boardData';
+import { getPins } from '../data/pinData';
 
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -20,6 +21,7 @@ const domEvents = () => {
         board_title: document.querySelector('#title').value,
         board_image: document.querySelector('#image').value,
       };
+
       createBoard(boardObject).then((boardArray) => showBoards(boardArray));
       document.querySelector('#form-container').innerHTML = '';
     }
@@ -31,14 +33,12 @@ const domEvents = () => {
         deleteBoard(firebaseKey).then((boardsArray) => showBoards(boardsArray));
       }
     }
-
     // SEE PINS ON BOARDS
     if (e.target.id.includes('see-pins-for-this-board')) {
-      const boardId = e.target.id.split('--')[1];
-      boardPinInfo(boardId).then((boardInfoObject) => {
-        showPins(boardInfoObject.pins);
-        boardPinInfo(boardInfoObject.board);
-      });
+      e.preventDefault();
+      const firebaseKey = e.target.id.split('--')[1];
+      getPins(firebaseKey).then((pins) => showPins(pins));
+      getSingleBoard(firebaseKey).then((board) => boardPinInfo(board));
     }
   });
 };
