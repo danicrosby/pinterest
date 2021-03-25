@@ -1,7 +1,7 @@
 const showPins = (array) => {
   document.querySelector('#header').innerHTML = `
     <div class="container-fluid mt-2 mx-auto mb-2" id="pins-overview">
-      <center><h3>Pins</h3></center>
+      <center><h2>Pins</h2></center>
     </div>`;
 
   document.querySelector('#add-button').innerHTML = '<button class="btn btn-light btn-lg m-2" style="font-size: 2em; width: 2em; height: 2em; border-radius: 50%" id="add-pin-btn">+</button>';

@@ -14,7 +14,6 @@ const domEvents = () => {
     // ADD BOARD FORM
     if (e.target.id.includes('add-board-btn')) {
       addBoardForm();
-      document.querySelector('#form-container').innerHTML = '';
     }
 
     // SUBMIT BOARD FORM

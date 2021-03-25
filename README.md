@@ -1,55 +1,37 @@
-# Pinterest
+# Almost Pinterest
 
-Your team has been tasked with creating pinterest.  If you live under a rock and have never used pinterest before go figure out what it does. TLDR; users create boards and can pin urls to the boards
-
-## Requirements
-* Clean code - single responsibility principle
-* ES6 Modules bundled with webpack
-* No errors - linters should be clean
-* SASS and Bootstrap for styling
-* Completely planned out - before each section you should be making new cards before you code.  You should have wireframes and an ERD
-
-## HW Parts
-
-### Part 1: ERDs and Authentication
-* Create an ERD for pinterest (do this in studygroup)
-* Clone this repo
-* Create a setup branch
-* Do all the stuff needed when setting up the project. Reference the webpack instructions if needed. These include making the updates to the `.env` file
-  * Create a new firebase project, database, and enable google authentication, etc.
-* Create an authentication branch and add a navbar with logout button, and place the google login button somewhere for you to test
-  * **Note: There are components that you can use to get started and style later. We just want you to get your auth setup by yourself.**
-* When your user is **logged out** they should see the navbar with only a brand.  And an h1 on the page that says PINTEREST (make a `home` component for this)
-* When your user is logged in they should see a navbar with a brand and a logout button and an H1 on the page that says Boards (make a `boards` component for this)
-
-### Part 2: READ
-#### Setup
-* Create some json data
-* Import that data into firebase
-
+Hello, and welcome to my app, Almost-Pinterest. It is a simplified version of the popular website Pinterest, which is a visual discovery engine for finding ideas like recipes, home, and style inspiration. When a user discovers Pins they love, they can save them to boards to keep their ideas organized and easy to find. This version includes a way for users to create boards and pin cards to the boards.
+# Almost Pinterest [![Netlify Status](https://api.netlify.com/api/v1/badges/5dd1ad37-3f6c-401c-8d07-041ea33f1d44/deploy-status)](https://app.netlify.com/sites/dc-almost-pinterest/deploys)
 #### User Stories
+* When a user navigates to the page they should see a navbar with a brand and a login in button and an H1 on the page that says 'Pinterest;.
+* When a user is logged in they should see a navbar with a brand and a logout button and an H1 on the page that says 'Boards'.
 * As a user, when I am logged in and the page loads, I should see all the boards that belong to me.
-
 * As a user, when I click on one of my boards, I should see a single board view that shows all pins for that board.
-
 * As a user, when I am on the single board view, there should be some way to go back to all my boards.
+* When a user logs out out they should see the navbar with only a brand icon and an h1 on the page that says PINTEREST.
 
-### Part 3: DELETE
-* As a user, I should be able to delete a pin from one of my boards.
+## Functionality Includes: 
+- CREATE boards and pins
+- READ boards and pinss
+- UPDATE boards and pins
+- DELETE boardss and pins
+- Login and and logout with google auth
 
-* As a user, I should be able to delete one of my boards.
+## Loom Video Walk-Through of Pretty-Much Pinterest
+https://www.loom.com/share/319c664aaf2f402bb146dd0de01cc6bd
 
-* As a user, when I delete one of my boards all pins that were on that board should be deleted as well.
 
-### Part 4: CREATE
-* As a user, I should be able to create a new pin.
+## Relevant Links
+- [Check out the deployed site](dc-almost-pinterest.netlify.app)
+- [LucidChart ERD | Wireframe](https://app.lucidchart.com/lucidchart/0f011832-9e4d-4de2-909d-ee4861d86393/edit?shared=true&page=900gQMxo9jeG#)
+- [Project Board](https://lucid.app/lucidchart/df341155-9f7f-47a6-88a4-15a8ec907d35/edit?page=0_0#)
 
-* As a user, I should be able to create a new board.
 
-### Part 5: UPDATE
-* As a user, I should be able to change which board a pin belongs to.
+## Project Screenshots
 
-### Part 6: Deploy and Readme
-* As a user I should be able to use your app on the internet - it should be deployed using Netlify.
 
-* As a developer, I want to see an amazing README for this project.
+## Future Goals For This Project Includes: 
+
+
+## Contributors
+- [Dani Crosby](https://github.com/danicrosby)

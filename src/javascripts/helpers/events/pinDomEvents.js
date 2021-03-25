@@ -10,7 +10,7 @@ const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     // DELETE PIN
     if (e.target.id.includes('delete-pin')) {
-      if (window.confirm('delete pin request line 24')) {
+      if (window.confirm('Are you sure you want to delete this pin?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
       }

@@ -1,5 +1,3 @@
-import selectBoard from './selectBoard';
-
 const addBoardForm = () => {
   document.querySelector('#overview').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '';
@@ -28,8 +26,6 @@ const addBoardForm = () => {
     </div>
   </div>
 </div>`;
-
-  selectBoard();
 };
 
 export default addBoardForm;
