@@ -10,6 +10,7 @@ Hello, and welcome to my app, Almost-Pinterest. It is a simplified version of th
 - UPDATE boards and pins
 - DELETE boardss and pins
 - Login and and logout with google auth
+- 
 
 #### User Stories
 * When a user navigates to the page they should see a navbar with a brand and a login in button and an H1 on the page that says 'Pinterest;.
@@ -36,6 +37,10 @@ https://www.loom.com/share/319c664aaf2f402bb146dd0de01cc6bd
 
 
 ## Project Screenshots
+<img width="1098" alt="Screen Shot 2021-03-25 at 12 55 01 PM" src="https://user-images.githubusercontent.com/68397076/112525665-1a79ac80-8d6f-11eb-970e-96c4ff6b5ff4.png">
+<img width="1913" alt="Screen Shot 2021-03-25 at 12 54 48 PM" src="https://user-images.githubusercontent.com/68397076/112525670-1baad980-8d6f-11eb-8cbe-16b9b8026f48.png">
+<img width="704" alt="Screen Shot 2021-03-25 at 12 55 36 PM" src="https://user-images.githubusercontent.com/68397076/112525672-1baad980-8d6f-11eb-8113-16f3abb8b5e6.png">
+<img width="784" alt="Screen Shot 2021-03-25 at 12 55 22 PM" src="https://user-images.githubusercontent.com/68397076/112525673-1c437000-8d6f-11eb-8da1-b62af7bd75e2.png">
 
 
 ## Future Goals For This Project Includes: 
