@@ -40,8 +40,8 @@ const domEvents = () => {
       getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
     }
 
-    // EDIT PIN
-    if (e.target.id.includes('update-pin-btn')) {
+    // UPDATE PIN
+    if (e.target.id.includes('update-pin')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
       const pinObject = {
